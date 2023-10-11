@@ -22,7 +22,6 @@ public class UserController {
 
     if (user != null) return ResponseEntity.badRequest().body("Username already exists");
 
-
     var passwordHashred = BCrypt.withDefaults()
     .hashToString(12, userModel.getPassword().toCharArray());
 
